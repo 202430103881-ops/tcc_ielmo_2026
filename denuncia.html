@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova denúncia — Portal Escolar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="back-link" href="index.html" aria-label="Voltar ao início">←</a>
+      <span>Nova denúncia (1/2): Detalhes</span>
+    </header>
+
+    <section class="content form-content">
+      <p class="step-label">ETAPA 1 DE 2</p>
+      <h1>Conte o que aconteceu</h1>
+      <p class="intro">Preencha as informações abaixo. Não é necessário se identificar.</p>
+
+      <form action="sucesso.html" method="get">
+        <div class="form-grid">
+          <div class="field">
+            <label for="tipo">Tipo de incidente</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Selecione</option>
+              <option>Bullying</option>
+              <option>Vandalismo</option>
+              <option>Ameaça ou violência</option>
+              <option>Problema de segurança</option>
+              <option>Discriminação</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="local">Local</label>
+            <input id="local" name="local" type="text" placeholder="Ex.: Pátio, sala 12">
+          </div>
+
+          <div class="field">
+            <label for="data">Data aproximada</label>
+            <input id="data" name="data" type="date">
+          </div>
+
+          <div class="field">
+            <label for="hora">Horário aproximado</label>
+            <input id="hora" name="hora" type="time">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="descricao">Descreva o ocorrido</label>
+          <textarea id="descricao" name="descricao" rows="5"
+            placeholder="Conte o que aconteceu, onde e quando. Evite incluir nomes se quiser manter o anonimato."></textarea>
+          <small>Não inclua informações pessoais suas caso deseje permanecer anônimo.</small>
+        </div>
+
+        <div class="field">
+          <label for="midia">Anexar mídia <span class="optional">(opcional)</span></label>
+          <input class="file-input" id="midia" name="midia" type="file" accept="image/*,video/*">
+          <small>Você pode anexar uma foto ou um vídeo, se tiver.</small>
+        </div>
+
+        <div class="form-actions">
+          <a class="button button-secondary" href="index.html">Cancelar</a>
+          <button class="button button-primary" type="submit">Próximo passo</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
